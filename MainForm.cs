@@ -12,8 +12,6 @@ namespace AutoService
 {
     public partial class MainForm : Form
     {
-        int score = 0;
-
         public MainForm()
         {
             InitializeComponent();
@@ -23,43 +21,18 @@ namespace AutoService
         {
             
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Открываем машину
+        /// </summary>
+        private void carClick(object sender, EventArgs e)
         {
-            LadaForm lada = new LadaForm("Ford Focus");
+            Button btn = (Button)sender;
+            LadaForm lada = new LadaForm(btn.Text);
             lada.Show();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            LadaForm lada = new LadaForm("Pagani Zonda");
-            lada.Show();
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            LadaForm lada = new LadaForm("KIA Optima");
-            lada.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            LadaForm lada = new LadaForm(button4.Text);
-            lada.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            LadaForm lada = new LadaForm(button5.Text);
-            lada.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            LadaForm lada = new LadaForm(button6.Text);
-            lada.Show();
-        }
-
+        
         private void helpButton_Click(object sender, EventArgs e)
         {
             HelpForm help = new HelpForm();

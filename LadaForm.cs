@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,27 +17,17 @@ namespace AutoService
             InitializeComponent();
 
             Text = car;
-            pictureBox1.Load("../../Pictures/" + car + ".jpg");
+            try
+            {
+                pictureBox1.Load("../../Pictures/" + car + ".jpg");
+            }
+            catch (Exception) { }
 
-            if (car == "Ford Focus")
+            try
             {
-                textBox1.Text = "Ford Focus" +
-                    Environment.NewLine + "" +
-                    Environment.NewLine + "Мощность 100 л.с.";
+                textBox1.Text = File.ReadAllText("../../Pictures/" + car + ".txt");
             }
-            if (car == "KIA Optima")
-            {
-                textBox1.Text = "KIA Optima" +
-                    Environment.NewLine + "" +
-                    Environment.NewLine + "Мощность 100 л.с.";
-            }
-            if (car == "Pagani Zonda")
-            {
-                textBox1.Text = "Pagani Zonda" +
-                    Environment.NewLine + "" +
-                    Environment.NewLine + "Мощность 600 л.с.";
-            }
-
+            catch (Exception) { }
         }
 
         private void LadaForm_Load(object sender, EventArgs e)
