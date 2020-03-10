@@ -10,3 +10,14 @@ C:\Users\Abra\source\repos\AutoService\obj\Debug\AutoService.exe
 C:\Users\Abra\source\repos\AutoService\obj\Debug\AutoService.pdb
 C:\Users\Abra\source\repos\AutoService\obj\Debug\AutoService.LadaForm.resources
 C:\Users\Abra\source\repos\AutoService\obj\Debug\AutoService.PaganiForm.resources
+C:\Users\Abra\1\AutoService\bin\Debug\AutoService.exe.config
+C:\Users\Abra\1\AutoService\bin\Debug\AutoService.exe
+C:\Users\Abra\1\AutoService\bin\Debug\AutoService.pdb
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.HelpForm.resources
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.LadaForm.resources
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.MainForm.resources
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.Properties.Resources.resources
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.csproj.GenerateResource.cache
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.csproj.CoreCompileInputs.cache
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.exe
+C:\Users\Abra\1\AutoService\obj\Debug\AutoService.pdb
