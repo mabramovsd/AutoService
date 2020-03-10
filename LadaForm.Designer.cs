@@ -64,6 +64,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "LadaForm";
             this.Text = "LadaForm";
+            this.Load += new System.EventHandler(this.LadaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
