@@ -43,6 +43,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,6 +101,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(284, 40);
             this.button2.TabIndex = 2;
+            this.button2.Tag = "500000000";
             this.button2.Text = "Pagani Zonda";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.carClick);
@@ -126,6 +128,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(284, 40);
             this.button3.TabIndex = 4;
+            this.button3.Tag = "50000";
             this.button3.Text = "KIA Optima";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.carClick);
@@ -149,6 +152,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.button5, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.button6, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button7, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -241,6 +245,17 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.carClick);
             // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.Location = new System.Drawing.Point(295, 531);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(286, 44);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "Фильтр";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -280,6 +295,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button helpButton;
+        private System.Windows.Forms.Button button7;
     }
 }
 

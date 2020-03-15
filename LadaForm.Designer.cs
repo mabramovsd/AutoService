@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LadaForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.textBox1.Size = new System.Drawing.Size(485, 116);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Ford FOcus\r\n\r\nМощность 100 л.с.\r\nЦена 700000 рублей";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -55,11 +57,21 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Тип кузова";
+            // 
             // LadaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Name = "LadaForm";
@@ -75,5 +87,6 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

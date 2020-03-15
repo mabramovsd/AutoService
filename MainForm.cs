@@ -29,7 +29,7 @@ namespace AutoService
         private void carClick(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            LadaForm lada = new LadaForm(btn.Text);
+            LadaForm lada = new LadaForm(btn.Text, btn.Tag.ToString(), btn.AccessibleName);
             lada.Show();
         }
         
@@ -37,6 +37,12 @@ namespace AutoService
         {
             HelpForm help = new HelpForm();
             help.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Filter s = new Filter();
+            s.ShowDialog();
         }
     }
 }

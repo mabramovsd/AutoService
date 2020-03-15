@@ -12,11 +12,12 @@ namespace AutoService
 {
     public partial class LadaForm : Form
     {
-        public LadaForm(string car)
+        public LadaForm(string car, string price, string kuzov)
         {
             InitializeComponent();
 
-            Text = car;
+            Text = car + " " + price;
+            label2.Text = kuzov;
             try
             {
                 pictureBox1.Load("../../Pictures/" + car + ".jpg");
@@ -31,6 +32,11 @@ namespace AutoService
         }
 
         private void LadaForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
