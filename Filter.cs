@@ -10,14 +10,26 @@ using System.Windows.Forms;
 
 namespace AutoService
 {
+    /// <summary>
+    /// Автомобиль
+    /// </summary>
     public struct Car
     {
         public string name;
         public int price;
+        /// <summary>
+        /// Тип кузова
+        /// </summary>
         public string kuzov;
         public Button btn;
+        /// <summary>
+        /// Картинка
+        /// </summary>
         public PictureBox picture;
 
+        /// <summary>
+        /// Создаем автомобиль
+        /// </summary>
         public Car(string _name, int _price, string _kuzov)
         {
             name = _name;
@@ -40,7 +52,10 @@ namespace AutoService
 
     public partial class Filter : Form
     {
-        Car[] car_list = new Car[6];
+        /// <summary>
+        /// Массив машин
+        /// </summary>
+        Car[] car_list = new Car[8];
         
         public Filter()
         {
@@ -51,9 +66,11 @@ namespace AutoService
             car_list[3] = new Car("Lada Priora", 450000, "Седан");
             car_list[4] = new Car("KIA Optima", 1200000, "Седан");
             car_list[5] = new Car("Pagani Zonda", 12000000, "Суперкар");
+            car_list[6] = new Car("McLaren Senna", 12000000, "Суперкар");
+            car_list[7] = new Car("Renault Logan", 350000, "Седан");
 
-            int x = 0;
-            int y = 100;
+            int x = 10;
+            int y = 10;
             for (int i = 0; i < car_list.Length; i = i + 1)
             {
                 car_list[i].btn.Location = new Point(x, y);
@@ -61,16 +78,16 @@ namespace AutoService
                 car_list[i].btn.Tag = car_list[i].price;
                 car_list[i].btn.AccessibleName = car_list[i].kuzov;
                 car_list[i].btn.Click += new EventHandler(carClick);
-                Controls.Add(car_list[i].btn);
+                carsPanel.Controls.Add(car_list[i].btn);
 
                 car_list[i].picture.Location = new Point(x, y + 40);
                 car_list[i].picture.Size = new Size(140, 100);
-                Controls.Add(car_list[i].picture);
+                carsPanel.Controls.Add(car_list[i].picture);
 
                 x = x + 150;
-                if (x + 140 > Width)
+                if (x + 150 > carsPanel.Width)
                 {
-                    x = 0;
+                    x = 10;
                     y = y + 150;
                 }
             }
@@ -93,8 +110,8 @@ namespace AutoService
 
         private void filterClick(object sender, EventArgs e)
         {
-            int x = 0;
-            int y = 100;
+            int x = 10;
+            int y = 10;
             for (int i = 0; i < car_list.Length; i++)
             {
                 car_list[i].btn.Visible = true;
@@ -127,9 +144,9 @@ namespace AutoService
                     car_list[i].picture.Location = new Point(x, y + 40);
 
                     x = x + 150;
-                    if (x + 140 > Width)
+                    if (x + 150 > carsPanel.Width)
                     {
-                        x = 0;
+                        x = 10;
                         y = y + 150;
                     }
                 }

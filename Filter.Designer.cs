@@ -35,13 +35,14 @@
             this.kuzovCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.carsPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // filterButton
             // 
-            this.filterButton.Location = new System.Drawing.Point(568, 3);
+            this.filterButton.Location = new System.Drawing.Point(617, 3);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(180, 51);
+            this.filterButton.Size = new System.Drawing.Size(216, 71);
             this.filterButton.TabIndex = 13;
             this.filterButton.Text = "Фильтр";
             this.filterButton.UseVisualStyleBackColor = true;
@@ -105,12 +106,21 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Название";
             // 
+            // carsPanel
+            // 
+            this.carsPanel.AutoScroll = true;
+            this.carsPanel.Location = new System.Drawing.Point(0, 80);
+            this.carsPanel.Name = "carsPanel";
+            this.carsPanel.Size = new System.Drawing.Size(833, 365);
+            this.carsPanel.TabIndex = 21;
+            // 
             // Filter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(845, 450);
+            this.Controls.Add(this.carsPanel);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.kuzovCheckedListBox);
@@ -119,7 +129,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filterButton);
             this.Name = "Filter";
-            this.Text = "Sedan";
+            this.Text = "Фильтр";
             this.Load += new System.EventHandler(this.Filter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,5 +144,6 @@
         private System.Windows.Forms.CheckedListBox kuzovCheckedListBox;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel carsPanel;
     }
 }
