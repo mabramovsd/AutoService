@@ -55,7 +55,7 @@ namespace AutoService
         /// <summary>
         /// Массив машин
         /// </summary>
-        Car[] car_list = new Car[8];
+        Car[] car_list = new Car[11];
         
         public Filter()
         {
@@ -68,6 +68,9 @@ namespace AutoService
             car_list[5] = new Car("Pagani Zonda", 12000000, "Суперкар");
             car_list[6] = new Car("McLaren Senna", 12000000, "Суперкар");
             car_list[7] = new Car("Renault Logan", 350000, "Седан");
+            car_list[8] = new Car("Ford Sierra", 350000, "Седан");
+            car_list[9] = new Car("Audi 80", 150000, "Седан");
+            car_list[10] = new Car("Audi A8", 550000, "Седан");
 
             int x = 10;
             int y = 10;
@@ -125,11 +128,12 @@ namespace AutoService
                 }
 
                 if (searchTextBox.Text != "" &&
-                    !car_list[i].name.Contains(searchTextBox.Text))
+                    !car_list[i].name.ToLower().Contains(searchTextBox.Text.ToLower()))
                 {
                     car_list[i].btn.Visible = false;
                     car_list[i].picture.Visible = false;
                 }
+                
 
                 if (priceTextBox.Text != "" &&
                     car_list[i].price > Convert.ToInt32(priceTextBox.Text))
@@ -179,6 +183,37 @@ namespace AutoService
         private void kuzovCheckedListBox_MouseClick(object sender, MouseEventArgs e)
         {
             filterClick(null, null);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Без фильтра
+            if (carsPanel.Location.Y >= 100)
+            {
+                filterPanel.Size = new Size(filterPanel.Size.Width, 25);
+                carsPanel.Size = new Size(carsPanel.Size.Width, 360);
+                carsPanel.Location = new Point(4, 40);
+            }
+            //С фильтром
+            else
+            {
+                filterPanel.Size = new Size(filterPanel.Size.Width, 95);
+                carsPanel.Size = new Size(carsPanel.Size.Width, 300);
+                carsPanel.Location = new Point(4, 100);
+            }
+        }
+
+        private void priceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void filterButton_MouseEnter(object sender, EventArgs e)
+        {
         }
     }
 }
