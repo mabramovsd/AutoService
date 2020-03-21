@@ -23,3 +23,4 @@ C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.csproj.GenerateResource.cache
 C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.csproj.CoreCompileInputs.cache
 C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.exe
 C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.pdb
+C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.FavouriteCarsForm.resources

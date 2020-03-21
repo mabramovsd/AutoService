@@ -12,21 +12,26 @@ namespace AutoService
 {
     public partial class LadaForm : Form
     {
-        public LadaForm(string car, string price, string kuzov)
+        /// <summary>
+        /// Выбранная машина
+        /// </summary>
+        Car car;
+        public LadaForm(Car _car)
         {
+            car = _car;
             InitializeComponent();
 
-            Text = car + " " + price;
-            label2.Text = kuzov;
+            Text = car.name + " " + car.price.ToString();
+            label2.Text = car.kuzov;
             try
             {
-                pictureBox1.Load("../../Pictures/" + car + ".jpg");
+                pictureBox1.Load("../../Pictures/" + car.name + ".jpg");
             }
             catch (Exception) { }
 
             try
             {
-                textBox1.Text = File.ReadAllText("../../Pictures/" + car + ".txt");
+                textBox1.Text = File.ReadAllText("../../Pictures/" + car.name + ".txt");
             }
             catch (Exception) { }
         }
@@ -39,6 +44,11 @@ namespace AutoService
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FavouriteCarsForm.my_cars.Add(car);
         }
     }
 }

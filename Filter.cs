@@ -15,12 +15,21 @@ namespace AutoService
     /// </summary>
     public struct Car
     {
+        /// <summary>
+        /// Название машины
+        /// </summary>
         public string name;
+        /// <summary>
+        /// ЦЕна авто
+        /// </summary>
         public int price;
         /// <summary>
         /// Тип кузова
         /// </summary>
         public string kuzov;
+        /// <summary>
+        /// Кнопка
+        /// </summary>
         public Button btn;
         /// <summary>
         /// Картинка
@@ -55,23 +64,13 @@ namespace AutoService
         /// <summary>
         /// Массив машин
         /// </summary>
-        Car[] car_list = new Car[11];
+        public static Car[] car_list = new Car[11];
         
         public Filter()
         {
             InitializeComponent();
-            car_list[0] = new Car("Lada Vesta", 500000, "Седан");
-            car_list[1] = new Car("Toyota Camry", 1500000, "Седан");
-            car_list[2] = new Car("Ford Focus", 800000, "Хэтчбек");
-            car_list[3] = new Car("Lada Priora", 450000, "Седан");
-            car_list[4] = new Car("KIA Optima", 1200000, "Седан");
-            car_list[5] = new Car("Pagani Zonda", 12000000, "Суперкар");
-            car_list[6] = new Car("McLaren Senna", 12000000, "Суперкар");
-            car_list[7] = new Car("Renault Logan", 350000, "Седан");
-            car_list[8] = new Car("Ford Sierra", 350000, "Седан");
-            car_list[9] = new Car("Audi 80", 150000, "Седан");
-            car_list[10] = new Car("Audi A8", 550000, "Седан");
-
+            
+            #region Автоматическое расположение машин на форме
             int x = 10;
             int y = 10;
             for (int i = 0; i < car_list.Length; i = i + 1)
@@ -94,16 +93,22 @@ namespace AutoService
                     y = y + 150;
                 }
             }
+            #endregion
         }
 
         /// <summary>
         /// Открываем машину
         /// </summary>
-        private void carClick(object sender, EventArgs e)
+        public static void carClick(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            LadaForm lada = new LadaForm(btn.Text, btn.Tag.ToString(), btn.AccessibleName);
-            lada.Show();
+            for (int i = 0; i < car_list.Length; i = i + 1)
+            {
+                if (((Button)sender).Text == car_list[i].btn.Text)
+                {
+                    LadaForm lada = new LadaForm(car_list[i]);
+                    lada.Show();
+                }
+            }
         }
 
         private void Filter_Load(object sender, EventArgs e)

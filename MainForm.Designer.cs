@@ -44,6 +44,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -139,6 +140,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.button8, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.helpButton, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 1, 3);
@@ -248,7 +250,7 @@
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Location = new System.Drawing.Point(295, 531);
+            this.button7.Location = new System.Drawing.Point(587, 531);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(286, 44);
             this.button7.TabIndex = 13;
@@ -256,9 +258,20 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button8.Location = new System.Drawing.Point(295, 531);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(286, 44);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "Корзина";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 578);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -296,6 +309,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
