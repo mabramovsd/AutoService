@@ -48,7 +48,10 @@ namespace AutoService
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FavouriteCarsForm.my_cars.Add(car);
+            if (FavouriteCarsForm.my_cars.ContainsKey(car))
+                FavouriteCarsForm.my_cars[car] = FavouriteCarsForm.my_cars[car] + 1;
+            else
+                FavouriteCarsForm.my_cars.Add(car, 1);
         }
     }
 }

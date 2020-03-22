@@ -12,15 +12,19 @@ namespace AutoService
 {
     public partial class FavouriteCarsForm : Form
     {
-        public static List<Car> my_cars = new List<Car>();
+        //public static List<Car> my_cars = new List<Car>();
+
+        public static Dictionary<Car, int> my_cars = new Dictionary<Car, int>();
 
         public FavouriteCarsForm()
         {
             InitializeComponent();
             int x = 10;
             int y = 10;
-            foreach (Car car in my_cars)
+            foreach (KeyValuePair<Car, int> myCar in my_cars)
             {
+                Car car = myCar.Key;
+
                 #region 1 столбец
                 PictureBox picture = new PictureBox();
                 picture.Location = new Point(x, y);
@@ -79,8 +83,17 @@ namespace AutoService
                 Controls.Add(textBox1);
                 #endregion
 
+                #region 4 столбец
+                NumericUpDown numericUpDown1 = new NumericUpDown();
+                numericUpDown1.Font = new Font("Microsoft Sans Serif", 24);
+                numericUpDown1.Location = new Point(x + 640, y);
+                numericUpDown1.Size = new Size(50, 50);
+                numericUpDown1.Value = myCar.Value;
+                Controls.Add(numericUpDown1);
+                #endregion
+
                 y = y + 150;
-            }
+            }            
         }
 
         private void FavouriteCarsForm_Load(object sender, EventArgs e)
