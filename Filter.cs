@@ -28,6 +28,10 @@ namespace AutoService
         /// </summary>
         public string kuzov;
         /// <summary>
+        /// Мощность
+        /// </summary>
+        public int power;
+        /// <summary>
         /// Кнопка
         /// </summary>
         public Button btn;
@@ -39,9 +43,10 @@ namespace AutoService
         /// <summary>
         /// Создаем автомобиль
         /// </summary>
-        public Car(string _name, int _price, string _kuzov)
+        public Car(string _name, int _price, int _power, string _kuzov)
         {
             name = _name;
+            power = _power;
             price = _price;
             kuzov = _kuzov;
 
@@ -104,6 +109,21 @@ namespace AutoService
             for (int i = 0; i < car_list.Length; i = i + 1)
             {
                 if (((Button)sender).Text == car_list[i].btn.Text)
+                {
+                    LadaForm lada = new LadaForm(car_list[i]);
+                    lada.Show();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Открываем машину
+        /// </summary>
+        public static void carClick2(object sender, EventArgs e)
+        {
+            for (int i = 0; i < car_list.Length; i = i + 1)
+            {
+                if (((PictureBox)sender).Image == car_list[i].picture.Image)
                 {
                     LadaForm lada = new LadaForm(car_list[i]);
                     lada.Show();

@@ -20,17 +20,17 @@ namespace AutoService
         private void MainForm_Load(object sender, EventArgs e)
         {
             #region Заполнение массива машин
-            Filter.car_list[0] = new Car("Lada Vesta", 500000, "Седан");
-            Filter.car_list[1] = new Car("Toyota Camry", 1500000, "Седан");
-            Filter.car_list[2] = new Car("Ford Focus", 800000, "Хэтчбек");
-            Filter.car_list[3] = new Car("Lada Priora", 450000, "Седан");
-            Filter.car_list[4] = new Car("KIA Optima", 1200000, "Седан");
-            Filter.car_list[5] = new Car("Pagani Zonda", 12000000, "Суперкар");
-            Filter.car_list[6] = new Car("McLaren Senna", 12000000, "Суперкар");
-            Filter.car_list[7] = new Car("Renault Logan", 350000, "Седан");
-            Filter.car_list[8] = new Car("Ford Sierra", 350000, "Седан");
-            Filter.car_list[9] = new Car("Audi 80", 150000, "Седан");
-            Filter.car_list[10] = new Car("Audi A8", 550000, "Седан");
+            Filter.car_list[0] = new Car("Lada Vesta", 500000, 100, "Седан");
+            Filter.car_list[1] = new Car("Toyota Camry", 1500000, 250, "Седан");
+            Filter.car_list[2] = new Car("Ford Focus", 800000, 120, "Хэтчбек");
+            Filter.car_list[3] = new Car("Lada Priora", 450000, 110, "Седан");
+            Filter.car_list[4] = new Car("KIA Optima", 1200000, 150, "Седан");
+            Filter.car_list[5] = new Car("Pagani Zonda", 12000000, 666, "Суперкар");
+            Filter.car_list[6] = new Car("McLaren Senna", 12000000, 1000, "Суперкар");
+            Filter.car_list[7] = new Car("Renault Logan", 350000, 80, "Седан");
+            Filter.car_list[8] = new Car("Ford Sierra", 350000, 80, "Седан");
+            Filter.car_list[9] = new Car("Audi 80", 150000, 120, "Седан");
+            Filter.car_list[10] = new Car("Audi A8", 550000, 400, "Седан");
             #endregion
         }
 

@@ -38,12 +38,14 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(10, 26);
+            this.textBox1.Location = new System.Drawing.Point(10, 38);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(365, 80);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(365, 68);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Для этого автомобиля информации не найдено";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
