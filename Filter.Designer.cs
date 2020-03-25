@@ -43,8 +43,8 @@
             // 
             // filterButton
             // 
-            this.filterButton.Location = new System.Drawing.Point(457, 32);
-            this.filterButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.filterButton.Location = new System.Drawing.Point(457, 12);
+            this.filterButton.Margin = new System.Windows.Forms.Padding(2);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(162, 54);
             this.filterButton.TabIndex = 13;
@@ -76,7 +76,7 @@
             // priceTextBox
             // 
             this.priceTextBox.Location = new System.Drawing.Point(93, 32);
-            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(92, 20);
             this.priceTextBox.TabIndex = 17;
@@ -91,7 +91,7 @@
             "Хэтчбек",
             "Суперкар"});
             this.kuzovCheckedListBox.Location = new System.Drawing.Point(272, 32);
-            this.kuzovCheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kuzovCheckedListBox.Margin = new System.Windows.Forms.Padding(2);
             this.kuzovCheckedListBox.Name = "kuzovCheckedListBox";
             this.kuzovCheckedListBox.Size = new System.Drawing.Size(98, 49);
             this.kuzovCheckedListBox.TabIndex = 18;
@@ -102,7 +102,7 @@
             // searchTextBox
             // 
             this.searchTextBox.Location = new System.Drawing.Point(93, 56);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(92, 20);
             this.searchTextBox.TabIndex = 20;
@@ -122,7 +122,7 @@
             // 
             this.carsPanel.AutoScroll = true;
             this.carsPanel.Location = new System.Drawing.Point(4, 102);
-            this.carsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.carsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.carsPanel.Name = "carsPanel";
             this.carsPanel.Size = new System.Drawing.Size(625, 297);
             this.carsPanel.TabIndex = 21;
@@ -161,7 +161,7 @@
             this.ClientSize = new System.Drawing.Size(634, 408);
             this.Controls.Add(this.filterPanel);
             this.Controls.Add(this.carsPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Filter";
             this.Text = "Фильтр";
             this.Load += new System.EventHandler(this.Filter_Load);
