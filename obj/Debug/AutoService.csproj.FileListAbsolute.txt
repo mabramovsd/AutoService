@@ -24,3 +24,17 @@ C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.csproj.CoreCompileInputs.cach
 C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.exe
 C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.pdb
 C:\Users\Abra\HP\AutoService\obj\Debug\AutoService.FavouriteCarsForm.resources
+C:\Users\Abra\source\repos\AutoService3\bin\Debug\AutoService.exe.config
+C:\Users\Abra\source\repos\AutoService3\bin\Debug\AutoService.exe
+C:\Users\Abra\source\repos\AutoService3\bin\Debug\AutoService.pdb
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.csprojAssemblyReference.cache
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.FavouriteCarsForm.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.HelpForm.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.LadaForm.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.MainForm.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.Properties.Resources.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.Filter.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.csproj.GenerateResource.cache
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.csproj.CoreCompileInputs.cache
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.exe
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.pdb

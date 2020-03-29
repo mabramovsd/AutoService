@@ -87,13 +87,103 @@ namespace AutoService
                 NumericUpDown numericUpDown1 = new NumericUpDown();
                 numericUpDown1.Font = new Font("Microsoft Sans Serif", 24);
                 numericUpDown1.Location = new Point(x + 640, y);
-                numericUpDown1.Size = new Size(50, 50);
+                numericUpDown1.Size = new Size(100, 50);
                 numericUpDown1.Value = myCar.Value;
+                numericUpDown1.ValueChanged += new EventHandler(CountChanged);
                 Controls.Add(numericUpDown1);
+
+
+                Label lbl5 = new Label();
+                lbl5.Text = "Итого: " + (car.price * myCar.Value).ToString();
+                lbl5.Font = new Font("Microsoft Sans Serif", 12);
+                lbl5.Location = new Point(x + 640, y + 70);
+                lbl5.Size = new Size(160, 30);
+                Controls.Add(lbl5);
+
                 #endregion
 
                 y = y + 150;
-            }            
+            }
+
+            RefreshPrices();
+        }
+
+        /// <summary>
+        /// Обновление итоговой цены
+        /// </summary>
+        private void CountChanged(object sender, EventArgs e)
+        {
+            //КОличество
+            NumericUpDown nud = (NumericUpDown)sender;
+
+            //Смотрим, какая строка
+            for (int i = 0; i < my_cars.Count; i++)
+            {
+                if (nud.Location == new Point(650, 150 * i + 10))
+                {
+                    //Бегаем по всей форме
+                    //Цена
+                    int price = 0;
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is Label &&
+                            ctrl.Location == new Point(210, 150 * i + 50))
+                        {
+                            price = Convert.ToInt32(ctrl.Text.Replace("Цена: ", ""));
+                        }
+                    }
+
+                    //Итого
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is Label &&
+                            ctrl.Location == new Point(650, 150 * i + 80))
+                        {
+                            ctrl.Text = "Итого: " + (price * nud.Value).ToString();
+                        }
+                    }
+                }
+            }
+
+            RefreshPrices();
+        }
+
+        //Итоговая стоимость
+        void RefreshPrices()
+        {
+            int total = 0;
+            int totalPrice = 0;
+
+            for (int i = 0; i < my_cars.Count; i++)
+            {
+                //Бегаем по всей форме
+                //Цена
+                int price = 0;
+                foreach (Control ctrl in Controls)
+                {
+                    if (ctrl is Label &&
+                        ctrl.Location == new Point(210, 150 * i + 50))
+                    {
+                        price = Convert.ToInt32(ctrl.Text.Replace("Цена: ", ""));
+                    }
+                }
+
+                //Количество
+                int count = 0;
+                foreach (Control ctrl in Controls)
+                {
+                    if (ctrl is NumericUpDown &&
+                        ctrl.Location == new Point(650, 150 * i + 10))
+                    {
+                        count = (int)((NumericUpDown)ctrl).Value;
+                    }
+                }
+
+                total = total + count;
+                totalPrice = totalPrice + count * price;
+            }
+
+            Text = "Корзина (" + total + " товаров, " + totalPrice + " рублей)";//Смотрим, какая строка
         }
 
         private void FavouriteCarsForm_Load(object sender, EventArgs e)

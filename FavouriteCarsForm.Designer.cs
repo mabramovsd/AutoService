@@ -35,9 +35,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(772, 326);
+            this.ClientSize = new System.Drawing.Size(875, 326);
             this.Name = "FavouriteCarsForm";
-            this.Text = "FavouriteCarsForm";
+            this.Text = "Корзина";
             this.Load += new System.EventHandler(this.FavouriteCarsForm_Load);
             this.ResumeLayout(false);
 
