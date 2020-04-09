@@ -69,7 +69,7 @@ namespace AutoService
         /// <summary>
         /// Массив машин
         /// </summary>
-        public static Car[] car_list = new Car[11];
+        public static List<Car> car_list = new List<Car>();
         
         public Filter()
         {
@@ -78,7 +78,7 @@ namespace AutoService
             #region Автоматическое расположение машин на форме
             int x = 10;
             int y = 10;
-            for (int i = 0; i < car_list.Length; i = i + 1)
+            for (int i = 0; i < car_list.Count; i = i + 1)
             {
                 car_list[i].btn.Location = new Point(x, y);
                 car_list[i].btn.Size = new Size(140, 40);
@@ -106,7 +106,7 @@ namespace AutoService
         /// </summary>
         public static void carClick(object sender, EventArgs e)
         {
-            for (int i = 0; i < car_list.Length; i = i + 1)
+            for (int i = 0; i < car_list.Count; i = i + 1)
             {
                 if (((Button)sender).Text == car_list[i].btn.Text)
                 {
@@ -121,7 +121,7 @@ namespace AutoService
         /// </summary>
         public static void carClick2(object sender, EventArgs e)
         {
-            for (int i = 0; i < car_list.Length; i = i + 1)
+            for (int i = 0; i < car_list.Count; i = i + 1)
             {
                 if (((PictureBox)sender).Image == car_list[i].picture.Image)
                 {
@@ -140,7 +140,7 @@ namespace AutoService
         {
             int x = 10;
             int y = 10;
-            for (int i = 0; i < car_list.Length; i++)
+            for (int i = 0; i < car_list.Count; i++)
             {
                 car_list[i].btn.Visible = true;
                 car_list[i].picture.Visible = true;

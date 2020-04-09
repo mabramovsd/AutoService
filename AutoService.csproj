@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCarForm.Designer.cs">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FavouriteCarsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Filter.Designer.cs">
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCarForm.resx">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FavouriteCarsForm.resx">
       <DependentUpon>FavouriteCarsForm.cs</DependentUpon>
     </EmbeddedResource>

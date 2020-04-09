@@ -20,17 +20,15 @@ namespace AutoService
         private void MainForm_Load(object sender, EventArgs e)
         {
             #region Заполнение массива машин
-            Filter.car_list[0] = new Car("Lada Vesta", 500000, 100, "Седан");
-            Filter.car_list[1] = new Car("Toyota Camry", 1500000, 250, "Седан");
-            Filter.car_list[2] = new Car("Ford Focus", 800000, 120, "Хэтчбек");
-            Filter.car_list[3] = new Car("Lada Priora", 450000, 110, "Седан");
-            Filter.car_list[4] = new Car("KIA Optima", 1200000, 150, "Седан");
-            Filter.car_list[5] = new Car("Pagani Zonda", 12000000, 666, "Суперкар");
-            Filter.car_list[6] = new Car("McLaren Senna", 12000000, 1000, "Суперкар");
-            Filter.car_list[7] = new Car("Renault Logan", 350000, 80, "Седан");
-            Filter.car_list[8] = new Car("Ford Sierra", 350000, 80, "Седан");
-            Filter.car_list[9] = new Car("Audi 80", 150000, 120, "Седан");
-            Filter.car_list[10] = new Car("Audi A8", 550000, 400, "Седан");
+            Filter.car_list.Clear();
+            string[] lines = System.IO.File.ReadAllLines("Автомобили.txt");
+
+            foreach (string str in lines)
+            {
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                Car car = new Car(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]), parts[3]);
+                Filter.car_list.Add(car);
+            }
             #endregion
         }
 
@@ -59,6 +57,13 @@ namespace AutoService
         {
             FavouriteCarsForm s = new FavouriteCarsForm();
             s.ShowDialog();
+        }
+
+        private void AddCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCarForm s = new AddCarForm();
+            s.ShowDialog();
+            MainForm_Load(sender, e);
         }
     }
 }
