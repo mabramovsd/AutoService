@@ -48,6 +48,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прислатьПрайслистToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -276,9 +277,10 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddCarToolStripMenuItem});
+            this.AddCarToolStripMenuItem,
+            this.прислатьПрайслистToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(194, 70);
             // 
             // AddCarToolStripMenuItem
             // 
@@ -286,6 +288,13 @@
             this.AddCarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.AddCarToolStripMenuItem.Text = "Добавить машину";
             this.AddCarToolStripMenuItem.Click += new System.EventHandler(this.AddCarToolStripMenuItem_Click);
+            // 
+            // прислатьПрайслистToolStripMenuItem
+            // 
+            this.прислатьПрайслистToolStripMenuItem.Name = "прислатьПрайслистToolStripMenuItem";
+            this.прислатьПрайслистToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.прислатьПрайслистToolStripMenuItem.Text = "Прислать прайс-лист";
+            this.прислатьПрайслистToolStripMenuItem.Click += new System.EventHandler(this.прислатьПрайслистToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -332,6 +341,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem AddCarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem прислатьПрайслистToolStripMenuItem;
     }
 }
 
