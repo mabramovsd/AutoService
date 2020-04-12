@@ -187,7 +187,7 @@ namespace AutoService
         }
 
         private void FavouriteCarsForm_Load(object sender, EventArgs e)
-        {
+        {            
 
         }
     }

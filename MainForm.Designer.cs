@@ -283,7 +283,7 @@
             // AddCarToolStripMenuItem
             // 
             this.AddCarToolStripMenuItem.Name = "AddCarToolStripMenuItem";
-            this.AddCarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddCarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.AddCarToolStripMenuItem.Text = "Добавить машину";
             this.AddCarToolStripMenuItem.Click += new System.EventHandler(this.AddCarToolStripMenuItem_Click);
             // 
@@ -298,7 +298,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MainForm";
-            this.Text = "СПравочник автомобилей";
+            this.Text = "Справочник автомобилей";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

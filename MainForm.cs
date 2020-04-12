@@ -26,7 +26,7 @@ namespace AutoService
             foreach (string str in lines)
             {
                 string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                Car car = new Car(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]), parts[3]);
+                Car car = new Car(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]), parts[3], parts[4]);
                 Filter.car_list.Add(car);
             }
             #endregion

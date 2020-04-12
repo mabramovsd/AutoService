@@ -39,13 +39,18 @@ namespace AutoService
         /// Картинка
         /// </summary>
         public PictureBox picture;
+        /// <summary>
+        /// Адрес pdf-файла
+        /// </summary>
+        public string address;
 
         /// <summary>
         /// Создаем автомобиль
         /// </summary>
-        public Car(string _name, int _price, int _power, string _kuzov)
+        public Car(string _name, int _price, int _power, string _kuzov, string _address)
         {
             name = _name;
+            address = _address;
             power = _power;
             price = _price;
             kuzov = _kuzov;

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 using System.Windows.Forms;
 
 namespace AutoService
@@ -16,6 +11,12 @@ namespace AutoService
         /// Выбранная машина
         /// </summary>
         Car car;
+
+        /// <summary>
+        /// Для скачивания
+        /// </summary>
+        WebClient webClient = new WebClient();
+
         public LadaForm(Car _car)
         {
             car = _car;
@@ -23,6 +24,8 @@ namespace AutoService
 
             Text = car.name + " " + car.price.ToString();
             label2.Text = car.kuzov;
+            button2.Visible = (car.address != "");
+
             try
             {
                 pictureBox1.Load("../../Pictures/" + car.name + ".jpg");
@@ -52,6 +55,14 @@ namespace AutoService
                 FavouriteCarsForm.my_cars[car] = FavouriteCarsForm.my_cars[car] + 1;
             else
                 FavouriteCarsForm.my_cars.Add(car, 1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            webClient.DownloadFile(car.address, 
+                string.Format($"c:\\users\\{Environment.UserName}\\Downloads\\" + car.name + ".pdf"));
+            MessageBox.Show("Сохранено в " + 
+                string.Format($"c:\\users\\{Environment.UserName}\\Downloads\\" + car.name + ".pdf"));
         }
     }
 }

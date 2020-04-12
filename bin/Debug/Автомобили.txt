@@ -1,13 +1,13 @@
-Lada Vesta, 500000, 100, Седан, {Хромированный салон; 1000}
-Toyota Camry, 1500000, 250, Седан
-Ford Focus, 800000, 120, Хэтчбек
-Lada Priora, 450000, 110, Седан
-KIA Optima, 1200000, 150, Седан
-Pagani Zonda, 12000000, 666, Суперкар
-McLaren Senna, 12000000, 1000, Суперкар
-Renault Logan, 350000, 80, Седан
-Ford Sierra, 350000, 80, Седан
-Audi 80, 150000, 120, Седан
-Audi A8, 550000, 400, Седан
-Овечка, 10, 5, Седан
-Ferrari, 1234567, 250, Хэтчбек
+Lada Vesta, 500000, 100, Седан, http://lada.vaz.ru/files/exp_manual/re_lada_vesta_09-09-2016.pdf
+Toyota Camry, 1500000, 250, Седан, 
+Ford Focus, 800000, 120, Хэтчбек, 
+Lada Priora, 450000, 110, Седан, 
+KIA Optima, 1200000, 150, Седан, 
+Pagani Zonda, 12000000, 666, Суперкар, 
+McLaren Senna, 12000000, 1000, Суперкар, 
+Renault Logan, 350000, 80, Седан, 
+Ford Sierra, 350000, 80, Седан, 
+Audi 80, 150000, 120, Седан, 
+Audi A8, 550000, 400, Седан, 
+Овечка, 10, 5, Седан, 
+Ferrari, 1234567, 250, Хэтчбек, 
