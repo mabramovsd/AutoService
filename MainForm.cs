@@ -84,5 +84,30 @@ namespace AutoService
             }
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //Вход / выход
+            if (AuthForm.Login == "")
+            {
+                AuthForm af = new AuthForm();
+                af.ShowDialog();
+            }
+            else
+            {
+                AuthForm.Login = "";
+            }
+
+
+            if (AuthForm.Login == "")
+            {
+                button9.Text = "Войти";
+                label1.Text = "";
+            }
+            else
+            {
+                button9.Text = "Выйти";
+                label1.Text = "Привет, " + AuthForm.Login;
+            }
+        }
     }
 }

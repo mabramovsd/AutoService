@@ -39,3 +39,4 @@ C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.csproj.CoreCompile
 C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.exe
 C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.pdb
 C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.AddCarForm.resources
+C:\Users\Abra\source\repos\AutoService3\obj\Debug\AutoService.AuthForm.resources
