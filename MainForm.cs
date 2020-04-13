@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
@@ -24,6 +25,18 @@ namespace AutoService
                 Car car = new Car(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]), parts[3], parts[4]);
                 Filter.car_list.Add(car);
             }
+            #endregion
+
+            #region Словари
+
+            RusWords.Add("Фильтр", "Фильтр");
+            RusWords.Add("Войти", "Войти");
+            RusWords.Add("Выйти", "Выйти");
+
+            EngWords.Add("Фильтр", "Filter");
+            EngWords.Add("Войти", "Login");
+            EngWords.Add("Выйти", "Logout");
+
             #endregion
         }
 
@@ -100,20 +113,68 @@ namespace AutoService
 
             if (AuthForm.Login == "")
             {
-                button9.Text = "Войти";
                 label1.Text = "";
             }
             else
             {
-                button9.Text = "Выйти";
                 label1.Text = "Привет, " + AuthForm.Login;
             }
+
+            translateAll();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             ResponseForm rf = new ResponseForm();
             rf.ShowDialog();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public static Dictionary<string, string> RusWords = new Dictionary<string, string>();
+        public static Dictionary<string, string> EngWords = new Dictionary<string, string>();
+        public static string Language = "Ru";
+
+        /// <summary>
+        /// Перевод слова
+        /// </summary>
+        public static string GetTranslation(string Key)
+        {
+            string result = "";
+            Dictionary<string, string> Words = 
+                (Language == "Ru") ? RusWords : EngWords;
+
+            try
+            {
+                result = Words[Key];
+            }
+            catch (Exception) { }
+
+            return result;
+        }
+
+        void translateAll()
+        {
+            button7.Text = GetTranslation("Фильтр");
+            if (AuthForm.Login == "")
+                button9.Text = GetTranslation("Войти");
+            else
+                button9.Text = GetTranslation("Выйти");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Language = "Ru";
+            translateAll();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Language = "En";
+            translateAll();
         }
     }
 }

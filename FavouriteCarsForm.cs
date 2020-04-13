@@ -12,8 +12,6 @@ namespace AutoService
 {
     public partial class FavouriteCarsForm : Form
     {
-        //public static List<Car> my_cars = new List<Car>();
-
         public static Dictionary<Car, int> my_cars = new Dictionary<Car, int>();
 
         public FavouriteCarsForm()

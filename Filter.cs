@@ -80,6 +80,10 @@ namespace AutoService
         {
             InitializeComponent();
             
+            Text = MainForm.GetTranslation("Фильтр");
+            button1.Text = MainForm.GetTranslation("Фильтр");
+
+
             #region Автоматическое расположение машин на форме
             int x = 10;
             int y = 10;
