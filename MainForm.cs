@@ -109,5 +109,11 @@ namespace AutoService
                 label1.Text = "Привет, " + AuthForm.Login;
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ResponseForm rf = new ResponseForm();
+            rf.ShowDialog();
+        }
     }
 }

@@ -51,6 +51,7 @@
             this.AddCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.прислатьПрайслистToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -164,6 +165,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button6, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.button7, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button10, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -191,7 +193,7 @@
             // button8
             // 
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Location = new System.Drawing.Point(220, 413);
+            this.button8.Location = new System.Drawing.Point(3, 413);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(211, 45);
             this.button8.TabIndex = 14;
@@ -202,7 +204,7 @@
             // helpButton
             // 
             this.helpButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.helpButton.Location = new System.Drawing.Point(3, 413);
+            this.helpButton.Location = new System.Drawing.Point(220, 413);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(211, 45);
             this.helpButton.TabIndex = 12;
@@ -320,6 +322,18 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 50);
             this.label1.TabIndex = 16;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button10.Location = new System.Drawing.Point(3, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(211, 44);
+            this.button10.TabIndex = 17;
+            this.button10.Text = "Обратная связь";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // MainForm
             // 
@@ -370,6 +384,7 @@
         private System.Windows.Forms.ToolStripMenuItem прислатьПрайслистToolStripMenuItem;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button10;
     }
 }
 
